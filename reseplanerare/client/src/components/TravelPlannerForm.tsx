@@ -25,26 +25,30 @@ export const TravelPlannerForm: React.FC<TravelPlannerFormProps> = ({
 
   return (
     <>
-      <div className="space-y-4">
-        <div className="space-y-2">
-          <Label htmlFor="from">Från</Label>
-          <div className="relative">
-            <MapPin className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
+      <div className='space-y-4'>
+        <div className='space-y-2'>
+          <Label htmlFor='from' className='text-left'>
+            Från
+          </Label>
+          <div className='relative'>
+            <MapPin className='absolute left-2 top-2.5 h-4 w-4 text-muted-foreground' />
             <Autocomplete
-              placeholder="Start"
+              placeholder='Start'
               onLocationSelect={(location) => setFromGid(location.gid)}
-              testId="from-autocomplete"
+              testId='from-autocomplete'
             />
           </div>
         </div>
-        <div className="space-y-2">
-          <Label htmlFor="to">Till</Label>
-          <div className="relative">
-            <MapPin className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
+        <div className='space-y-2'>
+          <Label htmlFor='to' className='text-left'>
+            Till
+          </Label>
+          <div className='relative'>
+            <MapPin className='absolute left-2 top-2.5 h-4 w-4 text-muted-foreground' />
             <Autocomplete
-              placeholder="Destination"
+              placeholder='Destination'
               onLocationSelect={(location) => setToGid(location.gid)}
-              testId="to-autocomplete"
+              testId='to-autocomplete'
             />
           </div>
         </div>
@@ -90,11 +94,11 @@ export const TravelPlannerForm: React.FC<TravelPlannerFormProps> = ({
         </div> */}
       </div>
       <Button
-        data-testId="searchButton"
-        className="w-full"
+        data-testId='searchButton'
+        className='w-full'
         onClick={() => onSearch(fromGid, toGid)}
       >
-        <Search className="mr-2 h-4 w-4" /> Sök resa
+        <Search className='mr-2 h-4 w-4' /> Sök resa
       </Button>
     </>
   );
