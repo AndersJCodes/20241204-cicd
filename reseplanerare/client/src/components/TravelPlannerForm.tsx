@@ -27,9 +27,7 @@ export const TravelPlannerForm: React.FC<TravelPlannerFormProps> = ({
     <>
       <div className='space-y-4'>
         <div className='space-y-2'>
-          <Label htmlFor='from' className='text-left'>
-            Från
-          </Label>
+          <Label htmlFor='from'>Från</Label>
           <div className='relative'>
             <MapPin className='absolute left-2 top-2.5 h-4 w-4 text-muted-foreground' />
             <Autocomplete
@@ -40,9 +38,7 @@ export const TravelPlannerForm: React.FC<TravelPlannerFormProps> = ({
           </div>
         </div>
         <div className='space-y-2'>
-          <Label htmlFor='to' className='text-left'>
-            Till
-          </Label>
+          <Label htmlFor='to'>Till</Label>
           <div className='relative'>
             <MapPin className='absolute left-2 top-2.5 h-4 w-4 text-muted-foreground' />
             <Autocomplete
